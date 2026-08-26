@@ -1,17 +1,36 @@
 aid: prenav
 name: Prenav
-description: 'Prenav is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'PRENAV, Inc. is a Belmont, California company that automates the visual
+  inspection of large civil and industrial structures using commercially available
+  drones, photogrammetry and deep learning. Its PRENAV.XYZ web platform stitches thousands
+  of drone photographs into a high-resolution 3D point-cloud digital twin, then runs
+  machine-learning models over that twin to detect cracking in concrete, spalling,
+  exposed rebar, cracks in steel and rust, resolving features under 0.2mm and tracking
+  change over time. A second line, Synthetic Imagery as a Service, procedurally renders
+  thousands of annotated photoreal defect images each month to augment a customer''s
+  own AI training sets. PRENAV publishes no developer program, no public API, and no
+  machine-readable API description; the product is sold as an enterprise service through
+  a contact form.'
+image: https://images.squarespace-cdn.com/content/5c86f3b7e66669535a6c9f4e/1552348158584-N3TXONPXQMFUWZZ4B658/PRENAV_RGB_Color+Gradient.png?content-type=image%2Fpng
 url: https://raw.githubusercontent.com/api-evangelist/prenav/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profile
+x-tier-reason: no-public-api-surface
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Drones
+- Infrastructure Inspection
+- Digital Twins
+- Deep Learning
+- Computer Vision
+- Photogrammetry
+- Synthetic Data
+- Asset Management
+- Construction Technology
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +38,56 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/prenav-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.prenav.com/
+- type: About
+  url: https://www.prenav.com/aboutus
+- type: TermsOfService
+  url: https://www.prenav.com/termsofuse
+- type: PrivacyPolicy
+  url: https://www.prenav.com/privacy
+- type: Support
+  url: https://www.prenav.com/contact-us
+- type: News
+  url: https://www.prenav.com/news
+- type: Jobs
+  url: https://www.prenav.com/jobs
+- type: UseCases
+  url: https://www.prenav.com/usecases
+- type: Product
+  url: https://www.prenav.com/product-xyz
+- type: LinkedIn
+  url: https://www.linkedin.com/company/prenav
+- type: Twitter
+  url: https://twitter.com/prenavinc
+- type: YouTube
+  url: https://www.youtube.com/user/prenavcorp
+- type: LLMsTxt
+  url: llms/prenav-llms.txt
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    PRENAV sells PRENAV.XYZ as a hosted end-user inspection application with no
+    developer program of any kind — /api, /docs, /developers, /openapi.json,
+    /swagger.json, /llms.txt and every /.well-known/ path all return a real 404
+    on www.prenav.com, no package exists on npm/PyPI/RubyGems/crates.io, and the
+    prenav.xyz application domain named in PRENAV's own Terms of Use no longer
+    resolves on any public resolver.
+  evidence:
+  - url: https://www.prenav.com/openapi.json
+    status: 404
+  - url: https://www.prenav.com/developers
+    status: 404
+  - url: https://www.prenav.com/.well-known/agent-card.json
+    status: 404
+  - url: https://demo2.prenav.xyz
+    status: 0
+  checked: '2026-08-26'

@@ -1,0 +1,24 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.prenav.com/synthetic-imagery
+plan_count: 0
+note: >-
+  PRENAV publishes no plans, tiers or prices. https://www.prenav.com/pricing
+  returns HTTP 404 and no pricing page appears in the site's own sitemap.xml
+  (17 URLs, fetched 2026-08-26, HTTP 200). Both product lines are sold as an
+  enterprise engagement through a contact form: the PRENAV.XYZ page says "if
+  you would like to receive free access to our demo site, please get in touch
+  with us", and the Synthetic Imagery page says "please contact us for pricing.
+  We offer a variety of options to get you started." No self-serve signup, no
+  published quota, no overage schedule.
+model: contact-sales
+plans: []
+evidence:
+- url: https://www.prenav.com/pricing
+  status: 404
+- url: https://www.prenav.com/sitemap.xml
+  status: 200
+- url: https://www.prenav.com/synthetic-imagery
+  status: 200
+- url: https://www.prenav.com/product-xyz
+  status: 200

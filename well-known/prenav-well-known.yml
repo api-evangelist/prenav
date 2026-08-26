@@ -1,0 +1,51 @@
+generated: '2026-08-26'
+method: probed
+source: live GET of each /.well-known/ path on every host in apis.yml
+note: >-
+  Every probed path returned a real HTTP 404. www.prenav.com is a Squarespace
+  site and returns a genuine 404 status (not a soft-200 catch-all) — a control
+  probe of /.well-known/zzz-nonexistent-control-probe returned 404 with the
+  identical 48,484-byte Squarespace 404 body, confirming the negatives are real
+  and that no path was answered with an SPA shell. Nothing was saved, so NO
+  WellKnown and NO SecurityTxt pointer is emitted in apis.yml. The second host
+  named in PRENAV's own Terms of Use and Privacy Policy — prenav.xyz, the
+  PRENAV.XYZ application domain, including the [your_subdomain].prenav.xyz
+  tenant pattern — could not be probed at all: its delegation is broken and
+  every public resolver returns SERVFAIL.
+hit_count: 0
+hosts:
+- host: https://www.prenav.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: https://prenav.xyz
+  unreachable: true
+  unreachable_reason: >-
+    DNS SERVFAIL on 8.8.8.8, 1.1.1.1 and 9.9.9.9 — the domain is registered
+    (GoDaddy, registry expiry 2026-12-15) and delegated to ns-cloud-c1..c4
+    .googledomains.com, but those nameservers no longer answer for the zone.
+  documents: []
+soft_404_control:
+  path: /.well-known/zzz-nonexistent-control-probe
+  host: https://www.prenav.com
+  status: 404
+  bytes: 48484

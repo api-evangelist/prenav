@@ -64,5 +64,14 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Prenav is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+PRENAV, Inc. automates the visual inspection of large civil and industrial structures using
+off-the-shelf drones, photogrammetry and deep learning. Its PRENAV.XYZ web platform turns
+thousands of drone photographs into a high-resolution 3D point-cloud digital twin and runs
+machine-learning models over it to detect cracking in concrete, spalling, exposed rebar,
+cracks in steel and rust. A second line, Synthetic Imagery as a Service, procedurally renders
+annotated photoreal defect images to augment a customer's own AI training data.
+
+PRENAV publishes no public API, developer portal, SDK or machine-readable API description.
+Probed 2026-08-26.
+
+- https://www.prenav.com/
