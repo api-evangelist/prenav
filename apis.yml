@@ -11,6 +11,17 @@ description: 'PRENAV, Inc. is a Belmont, California company that automates the v
   own AI training sets. PRENAV publishes no developer program, no public API, and no
   machine-readable API description; the product is sold as an enterprise service through
   a contact form.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://images.squarespace-cdn.com/content/5c86f3b7e66669535a6c9f4e/1552348158584-N3TXONPXQMFUWZZ4B658/PRENAV_RGB_Color+Gradient.png?content-type=image%2Fpng
 url: https://raw.githubusercontent.com/api-evangelist/prenav/refs/heads/main/apis.yml
 x-type: company
