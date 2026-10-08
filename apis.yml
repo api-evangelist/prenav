@@ -74,6 +74,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Plans
+  url: plans/prenav-plans-pricing.yml
 - url: https://www.prenav.com/news/
   type: Blog
 - type: DomainSecurity
